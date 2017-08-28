@@ -50,6 +50,7 @@ keytar.getPassword(user.home, user.id)
 	.then(pw => {
 		const auth = new Buffer(`${user.id}:${pw}`).toString('base64');
 		const options = {
+			maxAge: 1000 * 60,
 			headers: {
 				Authorization: `Basic ${auth}`
 			}
