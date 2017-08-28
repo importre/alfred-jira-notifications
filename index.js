@@ -40,8 +40,7 @@ function makeItem(data) {
 function showOutput(data) {
 	const items = data
 		.map(makeItem)
-		.reduce((acc, item) => acc.concat(item), [])
-		//.filter(item => !item.read);
+		.reduce((acc, item) => acc.concat(item), []);
 
 	alfy.output(items.length > 0 ? items : empty);
 }

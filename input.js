@@ -6,11 +6,11 @@ app.includeStandardAdditions = true;
 function showDialog(message, hidden, defaultAnswer) {
 	try {
 		return app.displayDialog(message, {
+			defaultAnswer,
 			withTitle: 'JIRA',
-			defaultAnswer: defaultAnswer,
-			hiddenAnswer: hidden ? true : false
+			hiddenAnswer: hidden
 		});
-	} catch (e) {
+	} catch (err) {
 		return {};
 	}
 }

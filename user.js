@@ -8,7 +8,7 @@ if (alfy.input) {
 
 	alfy.config.set('user', {
 		home: user.home,
-		id: user.id,
+		id: user.id
 	});
 
 	keytar.setPassword(user.home, user.id, user.pw)
