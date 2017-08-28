@@ -28,7 +28,7 @@ function makeItem(data) {
 		return {
 			title: data.item.title,
 			subtitle: `${i.title}: ${description}`,
-			arg: `${baseUrl}/${i.url}`,
+			arg: `${i.id}|${baseUrl}/${i.url}`,
 			read: i.read,
 			icon: {
 				path: i.read ? 'icon.png' : 'unread.png'

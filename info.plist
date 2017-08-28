@@ -10,7 +10,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>66760273-A820-49A0-AEF1-6EA8130745AD</string>
+				<string>46B31154-8124-4CCE-A773-C1943F17881A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>905AD61C-EF0D-4079-B1E4-55FF18CB3278</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,11 +31,49 @@
 		</array>
 		<key>3B60FF4F-068C-44EC-A7A5-9AC771BFA411</key>
 		<array/>
-		<key>C04FA3C1-1DD1-4E67-9710-E2A70C0780A9</key>
+		<key>46B31154-8124-4CCE-A773-C1943F17881A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D8F95FE-0B55-4772-BB77-BB5ADB98EBCE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4D8F95FE-0B55-4772-BB77-BB5ADB98EBCE</key>
+		<array/>
+		<key>905AD61C-EF0D-4079-B1E4-55FF18CB3278</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>66760273-A820-49A0-AEF1-6EA8130745AD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C04FA3C1-1DD1-4E67-9710-E2A70C0780A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>46B31154-8124-4CCE-A773-C1943F17881A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>905AD61C-EF0D-4079-B1E4-55FF18CB3278</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -119,6 +167,46 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node read.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4D8F95FE-0B55-4772-BB77-BB5ADB98EBCE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\|.+$</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>46B31154-8124-4CCE-A773-C1943F17881A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttrimmode</key>
@@ -183,12 +271,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>^.+?\|</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>905AD61C-EF0D-4079-B1E4-55FF18CB3278</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>osascript -l JavaScript input.js</string>
+				<string>./node_modules/.bin/run-node user.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -199,7 +304,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>D44341F0-1B3C-45E4-AB60-499136DDA48F</string>
+			<string>3B60FF4F-068C-44EC-A7A5-9AC771BFA411</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -232,7 +337,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node user.js "$1"</string>
+				<string>osascript -l JavaScript input.js</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -243,7 +348,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>3B60FF4F-068C-44EC-A7A5-9AC771BFA411</string>
+			<string>D44341F0-1B3C-45E4-AB60-499136DDA48F</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -266,12 +371,33 @@
 			<key>ypos</key>
 			<integer>270</integer>
 		</dict>
+		<key>46B31154-8124-4CCE-A773-C1943F17881A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>4D8F95FE-0B55-4772-BB77-BB5ADB98EBCE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>20</integer>
+		</dict>
 		<key>66760273-A820-49A0-AEF1-6EA8130745AD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>390</integer>
 			<key>ypos</key>
 			<integer>140</integer>
+		</dict>
+		<key>905AD61C-EF0D-4079-B1E4-55FF18CB3278</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>170</integer>
 		</dict>
 		<key>C04FA3C1-1DD1-4E67-9710-E2A70C0780A9</key>
 		<dict>
