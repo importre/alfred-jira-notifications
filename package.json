@@ -19,13 +19,21 @@
   },
   "files": [
     "index.js",
+    "C6F173D0-A3C9-42DC-962B-FF4FA5197E64.png",
+    "empty.png",
     "icon.png",
+    "unread.png",
+    "index.js",
+    "input.js",
+    "user.js",
     "info.plist"
   ],
   "keywords": [
     "alfred",
-    "workflow",
-    "alfy"
+    "alfy",
+    "jira",
+    "notifications",
+    "workflow"
   ],
   "dependencies": {
     "alfy": "^0.6.0",
