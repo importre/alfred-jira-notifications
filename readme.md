@@ -20,7 +20,7 @@ In Alfred, type `jira-login`, <kbd>Enter</kbd>.
 
 ### Show notifications
 
-In Alfred, type `jira-notifications`, <kbd>Enter</kbd>.
+In Alfred, type `jn` or `jira-notifications`, <kbd>Enter</kbd>. And then select an item you want.
 
 
 ## License
