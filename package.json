@@ -18,16 +18,16 @@
     "preuninstall": "alfy-cleanup"
   },
   "files": [
-    "index.js",
     "C6F173D0-A3C9-42DC-962B-FF4FA5197E64.png",
     "empty.png",
     "icon.png",
     "unread.png",
+
     "index.js",
+    "info.plist",
     "input.js",
     "read.js",
-    "user.js",
-    "info.plist"
+    "user.js"
   ],
   "keywords": [
     "alfred",
