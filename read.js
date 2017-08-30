@@ -14,6 +14,7 @@ keytar.getPassword(user.home, user.id)
 			body: alfy.input,
 			maxAge: 0,
 			headers: {
+				'Content-Type': 'application/json',
 				Authorization: `Basic ${auth}`
 			}
 		};
