@@ -25,10 +25,11 @@ function makeItem(data) {
 				noLinkBrackets: true
 			})
 			.replace(/\n+/g, ' ');
+		const path = i.url.startsWith('/pages/') ? `/wiki${i.url}` : i.url;
 		return {
 			title: data.item.title,
 			subtitle: `${i.title}: ${description}`,
-			arg: `${i.id}|${baseUrl}/${i.url}`,
+			arg: `${i.id}|${baseUrl}${path}`,
 			read: i.read,
 			icon: {
 				path: i.read ? 'icon.png' : 'unread.png'
