@@ -4,7 +4,7 @@ const alfy = require('alfy');
 const htmlToText = require('html-to-text');
 const keytar = require('keytar');
 
-const user = alfy.config.get('user');
+const user = alfy.config.get('user') || {};
 const baseUrl = user.home;
 const url = `${baseUrl}/wiki/rest/mywork/latest/notification/nested`;
 
@@ -46,16 +46,25 @@ function showOutput(data) {
 	alfy.output(items.length > 0 ? items : empty);
 }
 
-keytar.getPassword(user.home, user.id)
-	.then(pw => {
-		const auth = new Buffer(`${user.id}:${pw}`).toString('base64');
-		const options = {
-			maxAge: 1000 * 60,
-			headers: {
-				Authorization: `Basic ${auth}`
-			}
-		};
-		alfy.fetch(url, options)
-			.then(showOutput);
-	});
+if (!user.home || !user.email) {
+	alfy.output([{
+		title: 'Please login',
+		icon: {
+			path: alfy.icon.error
+		}
+	}]);
+} else {
+	keytar.getPassword(user.home, user.id)
+		.then(pw => {
+			const auth = new Buffer(`${user.id}:${pw}`).toString('base64');
+			const options = {
+				maxAge: 1000 * 60,
+				headers: {
+					Authorization: `Basic ${auth}`
+				}
+			};
+			alfy.fetch(url, options)
+				.then(showOutput);
+		});
+}
 
