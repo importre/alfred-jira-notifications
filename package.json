@@ -1,6 +1,6 @@
 {
   "name": "alfred-jira-notifications",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Show my notifications",
   "license": "MIT",
   "repository": "importre/alfred-jira-notifications",
@@ -22,7 +22,6 @@
     "empty.png",
     "icon.png",
     "unread.png",
-
     "index.js",
     "info.plist",
     "input.js",
@@ -55,4 +54,3 @@
     }
   }
 }
-
