@@ -46,7 +46,7 @@ function showOutput(data) {
 	alfy.output(items.length > 0 ? items : empty);
 }
 
-if (!user.home || !user.email) {
+if (!user.home || !user.id) {
 	alfy.output([{
 		title: 'Please login',
 		icon: {
